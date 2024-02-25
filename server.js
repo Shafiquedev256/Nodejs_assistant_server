@@ -7,13 +7,13 @@ const bodyParser = require('body-parser');
 require("dotenv").config();
 const app = express();
 
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use("/api",router);
-
 app.use(cors())
 app.use(express.json()) 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+app.use("/api",router)
+
+
 mongoose.connect(process.env.DATA_BASE).then(()=>{
   app.listen(2567,()=>{
   console.log("connected")
