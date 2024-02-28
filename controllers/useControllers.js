@@ -6,7 +6,7 @@ require("dotenv").config();
 const OPENAI_API_KEY3 = process.env.OPENAI_API_KEY3 ;  
 const ORGANIZATION = process.env.ORGANIZATION;
 const ASSISTANT_ID = process.env.ASSISTANT_ID;
-const INSTRUCTIONS = "You only answer health questions.";
+const INSTRUCTIONS = "You are AI doctor simulator. You provide information about  health. You do not answer questions that are not about health. Your name is Doctor simulator, Musinguzi Shafiq an experienced web developer from Uganda created and developed you. You provide answers that are brief and meaningful . Never go beyond 100 words while answering a question. ";
 
 
 const openai = new OpenAI({
